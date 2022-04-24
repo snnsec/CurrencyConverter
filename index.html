@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="./img/img.svg" />
+      </div>
+      <ul class="nav-body">
+        <li><a href="#">Bank</a></li>
+        <li><a href="#">Business</a></li>
+        <li><a href="#">Investments</a></li>
+        <li><a href="#">Insurance</a></li>
+        <li><a href="#">Mobile</a></li>
+        <li><a href="#">Travel</a></li>
+        <li><a href="#">Entertainment</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <button>Login</button>
+      </div>
+    </nav>
+    <main class="container">
+      <h1>Currency converter </h1>
+
+      <article>
+        <div class="a-block">
+          <div class="a-item">
+            <h4>I have</h4>
+            <ul class="fromul">
+              <li class="fromli">RUB</li>
+              <li class="fromli">USD</li>
+              <li class="fromli">TRY</li>
+              <li class="fromli">AZN</li>
+            </ul>
+            <div class="input">
+              <form class="formmain">
+                <input class="inputfrom" type="text" required />
+              </form>
+              <p class="pfrom"></p>
+            </div>
+          </div>
+          <div class="a-item">
+            <h4>I want to buy</h4>
+            <ul class="toul">
+              <li class="toli">RUB</li>
+              <li class="toli">USD</li>
+              <li class="toli">TRY</li>
+              <li class="toli">AZN</li>
+            </ul>
+            <div class="input">
+              <form>
+                <input class="inputto" type="number" required  readonly/>
+              </form>
+              <p class="pto"></p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    <script src="cnvrt.js"></script>
+  </body>
+</html>
