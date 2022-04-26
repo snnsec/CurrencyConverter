@@ -1,12 +1,12 @@
-let fromul = document.querySelector('.fromul')
-let fromulli = document.querySelectorAll('.fromul li')
-let toul = document.querySelector('.toul')
-let toulli = document.querySelectorAll('.toul li')
-let fromp = document.querySelector('.pfrom')
-let pto = document.querySelector('.pto')
-let inputfrom = document.querySelector('.inputfrom')
-let inputto = document.querySelector('.inputto')
-let form = document.querySelector('.formmain')
+const fromul = document.querySelector('.fromul')
+const fromulli = document.querySelectorAll('.fromul li')
+const toul = document.querySelector('.toul')
+const toulli = document.querySelectorAll('.toul li')
+const fromp = document.querySelector('.pfrom')
+const pto = document.querySelector('.pto')
+const inputfrom = document.querySelector('.inputfrom')
+const inputto = document.querySelector('.inputto')
+const form = document.querySelector('.formmain')
 //Defualt valyutalar
 let from = 'RUB'
 let to = 'USD'
@@ -42,8 +42,9 @@ litest();
 
 // apiden data getir
 function data(e) {
-    let net;
     e.preventDefault();
+
+    let net;
     fetch(`https://api.exchangerate.host/latest?base=${from}&symbols=${to}`)
         .then((response) => {
             return response.json();
@@ -58,19 +59,23 @@ function data(e) {
 }
 // soldaki secilmis listin adini from a verir
 function valuef(e) {
+    e.preventDefault()
+
     if (e.target.className === 'fromli') {
         from = e.target.innerText;
         litest()
     }
-    e.preventDefault()
+    
 }
 //sagdaki secilmis listin adini to  ya verir
 function valuet(e) {
+    e.preventDefault()
+    
     if (e.target.className = 'toli') {
         to = e.target.innerText
         litest();
     }
-    e.preventDefault()
+    
 }
 function hesabla(net) {
     inputto.value = (net * inputfrom.value).toFixed(2)
